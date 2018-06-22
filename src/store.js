@@ -6,14 +6,24 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     connect: false,
-    message: null,
+    template: null,
+    article: null,
+    table: null,
   },
   mutations: {
     SOCKET_CONNECT: (state) => {
-      state.connect = true;
+      const stat = state;
+      stat.connect = true;
     },
     SOCKET_MESSAGE: (state, message) => {
-      state.message = message;
+      const stat = state;
+      stat.template = message[0].meta.template;
+      if (stat.template === 'article') {
+        stat.article = message[0].data;
+      }
+      if (stat.template === 'table') {
+        stat.table = message[0].data;
+      }
     },
   },
   actions: {
