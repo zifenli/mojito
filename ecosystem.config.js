@@ -8,7 +8,7 @@ module.exports = {
     // First application
     {
       name: 'mojito',
-      script: 'server/app.js',
+      script: './bin/www',
       env: {
         COMMON_VARIABLE: 'true',
       },
