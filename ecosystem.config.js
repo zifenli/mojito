@@ -29,7 +29,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'git@github.com:zifenli/mojito.git',
       path: '/home/ubuntu/projects/mojito/',
-      'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js --env production',
+      'post-deploy': 'npm install && npm build && pm2 startOrRestart ecosystem.config.js --env production',
     },
   },
 };
