@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueSocketio from 'vue-socket.io';
+import 'iview/dist/styles/iview.css';
 import App from './App.vue';
 import router from './router';
 import store from './store';
