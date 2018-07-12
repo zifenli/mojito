@@ -25,6 +25,18 @@
           </router-link>
         </Menu-item>
       </Submenu>
+      <Submenu name="chart">
+        <template slot="title">
+          <Icon type="chart"></Icon>
+          图标
+        </template>
+        <Menu-item name="chart">
+          <router-link to="/components/line-chart">
+            <Icon type="chatbubble-working"></Icon>
+            &nbsp;&nbsp;LineChart
+          </router-link>
+        </Menu-item>
+      </Submenu>
     </Menu>
     <div class="mi-content">
       <router-view></router-view>

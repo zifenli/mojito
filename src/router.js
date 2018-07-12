@@ -4,6 +4,7 @@ import Dashboard from './views/Dashboard.vue';
 import Components from './views/Components.vue';
 import BugKiller from './components/BugKiller.vue';
 import Reporter from './components/Reporter.vue';
+import LineChart from './components/ChartDisplay.vue';
 
 Vue.use(Router);
 
@@ -26,6 +27,10 @@ export default new Router({
         {
           path: 'reporter',
           component: Reporter,
+        },
+        {
+          path: 'line-chart',
+          component: LineChart,
         },
       ],
     },

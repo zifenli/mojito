@@ -6,7 +6,7 @@ import router from './router';
 import store from './store';
 
 Vue.config.productionTip = false;
-Vue.use(VueSocketio, 'http://pusher.qcloudtest.cn/?channelId=pudding', store);
+Vue.use(VueSocketio, 'http://localhost:3333/?channelId=TEST', store);
 
 new Vue({
   router,
