@@ -20,7 +20,6 @@ export default {
   name: 'home',
   computed: {
     ...mapState([
-      'template',
       'templates',
     ]),
   },

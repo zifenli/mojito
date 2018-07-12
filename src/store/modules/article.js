@@ -1,7 +1,15 @@
 import * as types from '../mutation-types';
 
 const state = {
-  article: {},
+  article: {
+    items: [
+      {
+        title: '数据灾备',
+        content: '考虑先完成定期同步，sync数据06',
+        image: 'https://tower.im/assets/default_avatars/waves.jpg',
+      },
+    ],
+  },
 };
 
 const getters = {

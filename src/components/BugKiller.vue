@@ -17,9 +17,9 @@ import { Card } from 'iview';
 import { mapState } from 'vuex';
 
 export default {
-  computed: mapState([
-    'article',
-  ]),
+  computed: mapState({
+    article: state => state.article.article,
+  }),
   props: {
     template: String,
   },

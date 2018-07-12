@@ -1,16 +1,20 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import actions from './actions';
-import { state, mutations } from './mutations';
+import socket from './modules/socket';
 import article from './modules/article';
+import reporter from './modules/reporter';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state,
+  state: {
+    templates: ['Reporter', 'BugKiller', 'ChartDisplay'],
+  },
   actions,
-  mutations,
   modules: {
+    socket,
     article,
+    reporter,
   },
 });

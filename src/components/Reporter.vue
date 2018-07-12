@@ -40,8 +40,8 @@ export default {
         data: [],
       };
 
-      if (this.table) {
-        _.forEach(this.table.items, (item, index1) => {
+      if (this.reports) {
+        _.forEach(this.reports.items, (item, index1) => {
           const keys = ['name', 'address', 'phone'];
 
           if (index1 === 0) {
@@ -63,9 +63,9 @@ export default {
 
       return data;
     },
-    ...mapState([
-      'table',
-    ]),
+    ...mapState({
+      reports: state => state.reporter.reports,
+    }),
   },
   components: {
     Table,
