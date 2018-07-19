@@ -1,15 +1,8 @@
 import * as types from '../mutation-types';
+import * as templates from '../templates';
 
 const state = {
-  article: {
-    items: [
-      {
-        title: '数据灾备',
-        content: '考虑先完成定期同步，sync数据06',
-        image: 'https://tower.im/assets/default_avatars/waves.jpg',
-      },
-    ],
-  },
+  article: {},
 };
 
 const getters = {
@@ -24,6 +17,14 @@ const mutations = {
   [types.UPDATE_ARTICLE](state, data) {
     const st = state;
     st.article = data;
+  },
+  [types.SOCKET_MESSAGE](state, message) {
+    console.log(message);
+    const st = state;
+    const data = message[0];
+    if (data.template === templates.ARTICLE) {
+      st.article = data.data;
+    }
   },
 };
 

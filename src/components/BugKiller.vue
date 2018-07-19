@@ -4,6 +4,7 @@
       <p slot="title">
         BUGKILLER
       </p>
+      <p>{{article}}</p>
       <div v-for="(item, index) in article.items" :key="index">
         <h3>{{item.title}}</h3>
         <p>{{item.content}}</p>

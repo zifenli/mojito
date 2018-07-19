@@ -5,7 +5,6 @@ import App from './App.vue';
 import router from './router';
 import store from './store/index';
 
-console.log(store);
 Vue.config.productionTip = false;
 Vue.use(VueSocketio, 'http://localhost:3333/?channelId=TEST', store);
 

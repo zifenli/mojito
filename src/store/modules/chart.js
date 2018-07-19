@@ -1,3 +1,6 @@
+import * as types from '../mutation-types';
+import * as templates from '../templates';
+
 const state = {
   reports: {
     items: [
@@ -10,6 +13,18 @@ const state = {
   },
 };
 
+const mutations = {
+  [types.SOCKET_MESSAGE](state, message) {
+    console.log(message);
+    const st = state;
+    const data = message[0];
+    if (data.template === templates.CHART) {
+      st.reports = data.data;
+    }
+  },
+};
+
 export default {
   state,
+  mutations,
 };
